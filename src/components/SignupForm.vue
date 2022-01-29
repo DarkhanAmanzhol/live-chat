@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent = "handleSubmit">
-      <input type="text" required placeholder="Enter your name" v-model="name">
+      <input type="text" required placeholder="Enter your name" v-model="displayName">
       <input type="email" required placeholder="Enter your email" v-model="email">
       <input type="password" required placeholder="password" v-model="password">
       <button>Sign up</button>
@@ -25,7 +25,7 @@ export default {
                 context.emit('signup')
             }
         }
-        return { name, email, password, handleSubmit, error }
+        return { displayName, email, password, handleSubmit, error }
     }
 }
 </script>
